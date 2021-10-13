@@ -15,7 +15,7 @@ function App() {
   const [appName, setAppName] = useState("N3 Governance");
 
   return (
-    <div className="App flex flex-col h-screen justify-between items-start">
+    <div className="App flex flex-col lg:h-screen justify-between items-start">
       <header>
         <div className="app-container m-auto flex items-center h-full justify-between">
           <NeonLogo />
@@ -29,13 +29,13 @@ function App() {
             {" "}
             {appName} wants to connect{" "}
           </h1>
-          <p className="flex justify-center mt-12 opacity-50">
+          <p className="flex justify-center mt-8 opacity-50">
             {" "}
             Please select an option
           </p>
         </div>
-        <div className="flex m-auto w-full justify-around mt-12 mb-48">
-          <div className="w-1/3 bg-black m-2 p-6 flex-column align-center rounded">
+        <div className="lg:flex md:flex-column md:justify-center m-auto w-full lg:justify-around mt-8 mb-48 sm:flex-wrap md:flex-nowrap">
+          <div className="w-1/3 bg-black m-2 p-6 flex-column align-center rounded min-w-min md:mt-6">
             <h2 className="flex justify-center"> Deeplink connection</h2>
             <p className="flex justify-center opacity-50 text-center text-xs mt-2 max-w-xs m-auto">
               Ensure your Neon Wallet is open on the correct account then click
@@ -46,14 +46,14 @@ function App() {
               <button className="m-auto">Link Wallet</button>
             </div>
           </div>
-          <div className="w-1/3 bg-black m-2 p-6 flex-column align-center rounded">
+          <div className="w-1/3 bg-black m-2 p-6 flex-column align-center rounded min-w-min md:mt-6">
             <h2 className="flex justify-center"> QR code connection </h2>
             <p className="flex justify-center opacity-50 text-xs mt-2 text-center max-w-xs m-auto">
               Please scan QR code to connect your wallet on a compatible device
             </p>
-            <Qr className="m-auto mt-4" />
+            <Qr className="m-auto mt-4 max-w-full min-w-100" />
           </div>
-          <div className="w-1/3 bg-black m-2 p-6 flex-column align-center rounded">
+          <div className="w-1/3 bg-black m-2 p-6 flex-column align-center rounded min-w-min md:mt-6">
             <h2 className="flex justify-center"> Connection URL</h2>
             <p className="flex justify-center opacity-50 text-xs mt-2 text-center max-w-xs m-auto">
               Copy and paste the connection URL into the Add connection page in
