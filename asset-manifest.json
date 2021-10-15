@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wallet-connect-static-site/static/css/main.0e675623.chunk.css",
-    "main.js": "/wallet-connect-static-site/static/js/main.00531222.chunk.js",
-    "main.js.map": "/wallet-connect-static-site/static/js/main.00531222.chunk.js.map",
+    "main.js": "/wallet-connect-static-site/static/js/main.bb686a14.chunk.js",
+    "main.js.map": "/wallet-connect-static-site/static/js/main.bb686a14.chunk.js.map",
     "runtime-main.js": "/wallet-connect-static-site/static/js/runtime-main.fa37088c.js",
     "runtime-main.js.map": "/wallet-connect-static-site/static/js/runtime-main.fa37088c.js.map",
     "static/js/2.d28ae57e.chunk.js": "/wallet-connect-static-site/static/js/2.d28ae57e.chunk.js",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.fa37088c.js",
     "static/js/2.d28ae57e.chunk.js",
     "static/css/main.0e675623.chunk.css",
-    "static/js/main.00531222.chunk.js"
+    "static/js/main.bb686a14.chunk.js"
   ]
 }
