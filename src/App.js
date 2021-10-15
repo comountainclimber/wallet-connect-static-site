@@ -9,13 +9,20 @@ import { ReactComponent as Demo } from "./demo.svg";
 import { ReactComponent as DemoTablet } from "./demo-tablet.svg";
 import { ReactComponent as Download } from "./download.svg";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import QRCode from "react-qr-code";
 
 const CONNECT_MOCK =
   "wc:ddbfbf71d313c6a0b7324c734813a462c8b2396bcf289240b5cf1f53e9f39a69@2?controller=false&publicKey=ee4726212adfae935ce458b1e8f50c892f90cb2568284c8ab75f1a1f86cb884a&relay=%7B%22protocol%22%3A%22waku%22%7D";
 
 function App() {
-  const [appName, setAppName] = useState("N3 Governance");
+  const [uri, setUri] = useState(CONNECT_MOCK);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const uri = window.location.search.replace("?uri=", "");
+    if (uri) setUri(uri);
+  }, []);
 
   return (
     <div className="App flex flex-col lg:h-screen justify-between items-start">
@@ -33,10 +40,6 @@ function App() {
             {" "}
             Please select an option
           </h1>
-          {/* <p className="flex justify-center mt-8 opacity-60">
-            {" "}
-            Please select an option
-          </p> */}
         </div>
         <div className="lg:flex md:flex-column md:justify-center m-auto w-full lg:justify-around mt-8 mb-24 sm:flex-nowrap md:flex-nowrap">
           <div className="lg:w-1/3 md:w-1/2 sm:w-3/4 bg-black lg:m-2 p-6 flex-column align-center rounded min-w-min md:mt-6 md:m-auto sm:mt-6 sm:m-auto">
@@ -61,7 +64,11 @@ function App() {
                 Please scan QR code to connect your wallet on a compatible
                 device
               </p>
-              <Qr className="m-auto mt-4 max-w-full min-w-100" />
+              <QRCode
+                className="m-auto mt-4 max-w-full min-w-100"
+                value={uri}
+                bgColor="#4CFFB3"
+              />
             </div>
           </div>
           <div className="lg:w-1/3 md:w-1/2 sm:w-3/4 bg-black lg:m-2 p-6 flex-column align-center rounded min-w-min md:mt-6 md:m-auto sm:mt-6 sm:m-auto">
@@ -73,7 +80,7 @@ function App() {
               </p>
               <div className="flex flex-col items-center justify-between h-full">
                 <div className="flex text-xs mt-4 text-left max-w-xs m-auto break-all bg-blue text-green p-6 pb-10 rounded font-mono sm:mt-6">
-                  {CONNECT_MOCK}
+                  {uri}
                 </div>
                 <button className="primary-button m-auto sm:mt-6">
                   Copy URL
