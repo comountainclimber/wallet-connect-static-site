@@ -72,7 +72,7 @@ function App() {
                 in your wallet
               </p>
               <div className="flex flex-col items-center justify-between h-full">
-                <div className="flex text-xs mt-4 text-left max-w-xs m-auto break-all bg-blue text-green p-6 pb-14 rounded font-mono sm:mt-6">
+                <div className="flex text-xs mt-4 text-left max-w-xs m-auto break-all bg-blue text-green p-6 pb-10 rounded font-mono sm:mt-6">
                   {CONNECT_MOCK}
                 </div>
                 <button className="primary-button m-auto sm:mt-6">
