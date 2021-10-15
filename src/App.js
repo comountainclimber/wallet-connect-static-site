@@ -28,15 +28,15 @@ function App() {
       </header>
       <div className="app-container m-auto w-full">
         <div className="m-auto flex-col w-full justify-center md:mt-24 sm:mt-12">
-          <NeoLogo className="m-auto mb-6" />
+          {/* <NeoLogo className="m-auto mb-6" /> */}
           <h1 className="text-3xl flex justify-center text-center b">
             {" "}
-            A dApp wants to connect...
+            Please select an option
           </h1>
-          <p className="flex justify-center mt-8 opacity-60">
+          {/* <p className="flex justify-center mt-8 opacity-60">
             {" "}
             Please select an option
-          </p>
+          </p> */}
         </div>
         <div className="lg:flex md:flex-column md:justify-center m-auto w-full lg:justify-around mt-8 mb-24 sm:flex-nowrap md:flex-nowrap">
           <div className="lg:w-1/3 md:w-1/2 sm:w-3/4 bg-black lg:m-2 p-6 flex-column align-center rounded min-w-min md:mt-6 md:m-auto sm:mt-6 sm:m-auto">
