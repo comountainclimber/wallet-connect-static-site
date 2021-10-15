@@ -9,6 +9,16 @@
     url(./fonts/sofiapro-regular-webfont.woff) format("woff");
 }
 
+@font-face {
+  font-family: "SofiaProBold";
+  src: local("SofiaProBold"),
+    url(./fonts/sofiapro-bold-webfont.woff) format("woff");
+}
+
+.b {
+  font-family: SofiaProBold;
+}
+
 body {
   margin: 0;
   font-family: SofiaPro, Arial, serif;
@@ -21,7 +31,7 @@ code {
     monospace;
 }
 
-button {
+.primary-button {
   background-image: linear-gradient(180deg, #42535d 0%, #273139 100%);
   box-shadow: -4px -4px 20px 0 rgba(94, 101, 107, 0.19),
     4px 4px 20px 0 rgba(18, 21, 23, 0.81),
@@ -33,4 +43,29 @@ button {
   text-align: center;
   width: 219px;
   padding: 8px;
+}
+
+.download-button {
+  background: rgba(155, 188, 255, 0.06);
+  border-radius: 7.11px;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 28.44px;
+  width: 305px;
+  min-width: 305px;
+  padding: 2px 0;
+  height: 58px;
+}
+
+@media only screen and (max-width: 768px) {
+  #neon_wallet_logo {
+    max-width: 195px;
+  }
+
+  #wc_logo {
+    max-width: 200px;
+  }
+  #coz_logo {
+    max-width: 104px;
+  }
 }
